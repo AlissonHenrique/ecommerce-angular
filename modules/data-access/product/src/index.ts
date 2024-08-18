@@ -1,1 +1,2 @@
-export * from './lib/product-data-access/product-data-access.component';
+export * from './lib/mocks/product.mock';
+export * from './lib/product-search/product-search.service';
