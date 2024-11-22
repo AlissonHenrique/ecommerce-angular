@@ -16,5 +16,9 @@ export class ProductSearchService {
     return this.http.get<Product[]>(`${this.apiUrl}/products`, {
       params: { name },
     });
+    
+  }
+  getById(id: string): Observable<Product> {
+    return this.http.get<Product>(`${this.apiUrl}/products/${id}`);
   }
 }
