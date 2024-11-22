@@ -7,6 +7,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { mockProducts, ProductSearchService } from '@ecommerce/product-data-access';
 import { debounceTime, distinctUntilChanged, filter, Observable, switchMap } from 'rxjs';
 import { Product } from 'modules/data-access/product/src/lib/models/product.model';
+import { RouterModule } from '@angular/router';
  
 
 @Component({
@@ -16,7 +17,9 @@ import { Product } from 'modules/data-access/product/src/lib/models/product.mode
     MatAutocompleteModule,
     MatInputModule,
     MatFormFieldModule,
-    ReactiveFormsModule],
+    ReactiveFormsModule,
+    RouterModule
+  ],
   templateUrl: './product-search.component.html',
   styleUrl: './product-search.component.scss',
 })
