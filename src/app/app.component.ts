@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LayoutModule } from '@ecommerce/layout';
 import { ProductSearchComponent } from '@ecommerce/product-search';
-import { NxWelcomeComponent } from './nx-welcome.component';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @Component({
   standalone: true,
   imports: [
-    NxWelcomeComponent,
+    
     RouterModule,
     LayoutModule,
     ProductSearchComponent,
+    MatSnackBarModule
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
