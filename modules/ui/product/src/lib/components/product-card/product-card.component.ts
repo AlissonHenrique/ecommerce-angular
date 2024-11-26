@@ -8,7 +8,7 @@ import { Product } from '@ecommerce/product-data-access';
   standalone: true,
   imports: [CommonModule,MatCardModule],
   templateUrl: './product-card.component.html',
-  styleUrl: './product-card.component.css',
+  styleUrl: './product-card.component.scss',
 })
 export class ProductCardComponent {
   @Input() product!: Product;

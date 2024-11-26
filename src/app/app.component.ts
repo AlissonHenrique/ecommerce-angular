@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LayoutModule } from '@ecommerce/layout';
 import { ProductSearchComponent } from '@ecommerce/product-search';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CartComponent } from '@ecommerce/product-ui';
+import { CartService } from '@ecommerce/product-data-access';
 @Component({
   standalone: true,
   imports: [
@@ -10,12 +12,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     RouterModule,
     LayoutModule,
     ProductSearchComponent,
-    MatSnackBarModule
+    MatSnackBarModule,
+    CartComponent
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  
+  quantity = inject(CartService).quantity;
+
 }

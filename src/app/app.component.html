@@ -1,5 +1,10 @@
 <lib-header title="Ecommerce">
     <lib-product-search> </lib-product-search>
-    <p right>Login</p>
+    <div right class="right-content">
+      <p>Login</p>
+      <lib-cart
+        [quantity]="quantity()"
+      ></lib-cart>
+    </div>
   </lib-header>
   <router-outlet></router-outlet>
