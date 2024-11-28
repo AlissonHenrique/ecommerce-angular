@@ -12,8 +12,6 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './auth-form.component.scss',
 })
 export class AuthFormComponent {
-
-
   form = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
